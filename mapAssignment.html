@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+  </head>
+  <body>
+
+    <p>4,9,25</p>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+      function map(func,arr) {
+        new_arr=[];
+        for(var i=0;i<arr.length;i++){
+          console.log(arr[i]);
+          new_arr.push(func(arr[i]));
+        };
+        console.log(new_arr);
+
+        return new_arr;
+      }
+
+      function squareRoot(num){
+        return Math.sqrt(num);
+      }
+      document.getElementById("demo").innerHTML=map(squareRoot,[4,9,25]);
+
+    </script>
+  </body>
+</html>

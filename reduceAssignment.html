@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>4,9,25</p>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+      function reduce(func,arr) {
+        var ac=0;
+        for(var i=0;i<arr.lrngth;i++){
+          ac+=func(ac[i],ac);
+        }
+        return ac;
+      }
+
+      function sumArray(val,acc){
+        return val+acc;
+      }
+      document.getElementById("demo").innerHTML=reduce(sumArray,[4,9,25]);
+
+    </script>
+  </body>
+</html>
